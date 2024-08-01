@@ -1,0 +1,77 @@
+.header {
+    height: 100vh;
+    background: url('../img/background/background6.jpg') no-repeat center center/cover;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.header-title {
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 992px) {
+    .header-title {
+        font-size: 4rem;
+    }
+}
+.card {
+    border: none;
+}
+.profile-img {
+    border-radius: 50%;
+}
+.info-section {
+    padding-left: 30px; /* Adjust this value to move the information further to the right */
+}
+.cv-section {
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+.size {
+    max-height: 600px;
+    max-width: 1920px;
+    object-fit: contain;
+}
+
+.cv {
+    max-height: 900px;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: "Bauhaus 93", serif;
+}
+
+.sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-section {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        text-align: center;
+        padding-left: 0;
+    }
+}

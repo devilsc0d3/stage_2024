@@ -6,49 +6,13 @@
     <meta name="description" content="presentation de Fauré Léo">
     <title>Blog</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .header {
-            height: 100vh;
-            background: url('../img/background/background5.jpg') no-repeat center center/cover;
-            position: relative;
-        }
-
-        img {
-            border-radius: 10px;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-        .header-title {
-            font-size: 2rem;
-        }
-        @media (min-width: 768px) {
-            .header-title {
-                font-size: 3rem;
-            }
-        }
-        @media (min-width: 992px) {
-            .header-title {
-                font-size: 4rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/articles_stylesheet.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 <header class="header">
     <div class="overlay">
         <div>
-            <h1 class="header-title">Blog de Stage</h1>
+            <h1 class="header-title">Articles</h1>
         </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent position-absolute w-100">
@@ -58,7 +22,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">A propos de moi</a>
+                    <a class="nav-link" href="../../index.html">A propos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -67,7 +31,7 @@
                     <a class="nav-link" href="context.html">Contexte et présentation de l’entreprise</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ticket.html">Ticket billet</a>
+                    <a class="nav-link" href="ticket.html">Articles</a>
                 </li>
             </ul>
         </div>
@@ -80,12 +44,15 @@
             Début du Stage
         </div>
         <div class="card-body">
-            <img src="../img/icon/jvs.jpeg" class="" width="30%" alt="jvs logo">
-            <img src="../img/icon/logo.jpg" class="" width="30%" alt="logo sistec">
+            <div class="d-flex justify-content-between">
+                <img src="../img/icon/jvs.jpeg" class="" width="30%" alt="jvs logo">
+                <img src="../img/icon/logo.jpg" class="" width="30%" alt="logo sistec">
+            </div>
+
 
             <p>Au début du projet, nous avons configuré l'environnement pour avoir Docker et les API opérationnels. Nous avons également eu une présentation de l'entreprise ainsi que de sa filiale JVS par visio Teams. Cette introduction m'a permis de mieux comprendre le contexte et les objectifs du projet.</p>
             <p>lancement des images grâce a docker</p>
-            <img src="../img/documents/start.png" class="" width="100%" alt="lancement du projets">
+            <img src="../img/documents/start.png" class="docu" width="100%" alt="lancement du projets">
         </div>
     </div>
 
@@ -96,7 +63,7 @@
         <div class="card-body">
             <p>Récemment, j'ai entrepris de modifier une API Laravel, principalement pour améliorer la transmission des informations via JSON, afin de les rendre plus compatibles avec WebDev. Cette modification était essentielle pour faciliter l'intégration des données entre Laravel et WebDev, deux technologies que j'utilise régulièrement dans mes projets.</p>
             <p>voici un extrait d'une reponse JSON de l'API pour 10 facture grâce a postman</p>
-            <img src="../img/documents/postman.png" class="" width="100%" alt="postman">
+            <img src="../img/documents/postman.png" class="docu" width="100%" alt="postman">
         </div>
 
 
@@ -110,7 +77,7 @@
             <p>Pour renforcer mes compétences en développement, j'ai suivi une formation intensive de deux semaines sur WinDev et WebDev. Bien que j'aie déjà eu un bon niveau de compréhension de ces outils, cette formation m'a permis d'apprendre quelques astuces supplémentaires qui ont considérablement amélioré mon efficacité. J'ai ainsi pu maîtriser les aspects avancés de ces environnements de développement, ce qui m'a préparé à des projets plus complexes.</p>
             <p>Cependant, j'ai rencontré plusieurs difficultés, notamment l'apprentissage de WinDev à partir de zéro. WinDev étant en français, il était parfois déroutant de voir des termes comme "procédure" au lieu de "fonction". De plus, la création des états et la mise en conformité avec la réglementation SEPA (Titre Interbancaire de Paiement au format SEPA, TIPSEPA et le Talon Optique à 2 lignes, TO2L) nécessitaient une précision rigoureuse et une attention aux détails pour respecter le cahier des charges.</p>
             <p>nous avons la, un extrait de code en WLANGUAGE sur webdev</p>
-            <img src="../img/documents/webdev.png" class="" width="100%" alt="webdev">
+            <img src="../img/documents/webdev.png" class="docu" width="100%" alt="webdev">
         </div>
     </div>
 
@@ -120,8 +87,10 @@
         </div>
         <div class="card-body">
             <p>Avec mes nouvelles compétences en WebDev, j'ai créé un état d'édition pour générer des PDF de factures. Ce processus impliquait la création d'entêtes, de tableaux pour les lignes d'articles, ainsi que des sections spécifiques pour la TVA et le règlement des factures. Une attention particulière a été portée à la mise en page du talon de paiement SEPA, en respectant strictement les normes en vigueur. Chaque élément a été positionné avec précision, et les calculs d'espaces et de marges ont été réalisés pour assurer une conformité totale.</p>
+            <div class="center">
+            <img src="../img/documents/facture.png" class="center docu" width="60%" alt="facture">
+            </div>
         </div>
-        <img src="../img/documents/facture.png" class="70%" alt="facture">
 
     </div>
 
@@ -131,12 +100,13 @@
         </div>
         <div class="card-body">
             <p>L'un des défis de ce projet a été de mettre en conformité les factures avec la réglementation SEPA. Cela impliquait non seulement de s'assurer que toutes les informations obligatoires étaient présentes, mais aussi que le formatage et l'agencement respectaient les directives spécifiques. J'ai dû calculer avec précision les espaces et les marges, et positionner les informations à des endroits exacts pour garantir que les documents étaient conformes aux standards SEPA.</p>
+            <p>pied de page, talon  a 2 lignes optiques</p>
             <p><a href="https://www.collectivites-locales.gouv.fr/sites/default/files/migration/vd_cc_tip_sepa_et_talon_v1.4_.pdf">voici le cahier des charges que j'ai du respecter</a>, et voici une capture d'ecran d'un pdf de facture</p>
-            <img src="../img/documents/talon.png" class="" width="100%" alt="talon">
+            <img src="../img/documents/talon.png" class="" width="80%" alt="talon">
             <p>ped de page, tipsepa :</p>
-            <img src="../img/documents/sepa.png" class="" width="100%" alt="sepa">
+            <img src="../img/documents/sepa.png" class="" width="80%" alt="sepa">
             <p>ped de page, regi :</p>
-            <img src="../img/documents/regi.png" class="" width="100%" alt="regi">
+            <img src="../img/documents/regi.png" class="" width="80%" alt="regi">
 
             <p>Pour les données des états WebDev, j'ai exploré plusieurs pistes telles que passer par des variables, importer du JSON, connecter la base de données PostgreSQL directement, sérialiser et désérialiser l'API, et faire des requêtes SQL. Finalement, nous avons opté pour une table mémoire pour garder le job métier dans Laravel. Nous avons importé un fichier JSON mis dans le stockage objet au lieu de directement sur l'API à cause de la complexité. Cependant, j'ai dû faire face à un problème de "JSON non valide", ce qui nous a conduit à utiliser un fichier texte contenant tout le JSON à importer.</p>
             <p>ped de page, talon optique :</p>
@@ -152,7 +122,7 @@
             <p>Enfin, j'ai mis en place un serveur d'édition dédié à l'enregistrement des PDF. Ce serveur, configuré avec Apache, écoute sur le port 80. Cependant, pour éviter tout conflit avec l'API existante, j'ai déplacé cette dernière sur le port 85. De plus, pour le stockage des PDF générés, j'ai intégré le service de stockage d'objets AWS S3. J'ai configuré des clés d'accès, un bucket spécifique, et une URL dédiée pour stocker non seulement les PDF mais aussi les informations JSON des factures issues de l'API. Cette configuration permet une gestion efficace et sécurisée des documents générés.</p>
             <p>Le réglage des ports a été un autre défi, car j'avais l'API Laravel et le serveur WebDev configurés sur le port 80. Pour résoudre ce problème, j'ai déplacé l'API Laravel sur le port 85.</p>
             <p>ici, on a cyberduck qui est connecter au stockage objet S3</p>
-            <img src="../img/documents/cyberduck.png" class="" width="100%" alt="cyberduck">
+            <img src="../img/documents/cyberduck.png" class="docu" width="100%" alt="cyberduck">
 
         </div>
     </div>
@@ -176,7 +146,7 @@
 
 </div>
 
-<footer class="bg-light text-center py-3">
+<footer class="bg-dark text-center py-3">
     &copy; 2024
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
