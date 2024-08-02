@@ -12,14 +12,14 @@
 <header class="header">
     <div class="overlay">
         <div>
-            <h1 class="header-title">Contexte et présentation de l’entreprise</h1>
+            <h1 class="header-title fade-in">Contexte et présentation de l’entreprise</h1>
         </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark bg-transparent position-absolute w-100">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center fade-in" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="../../index.html">A propos</a>
@@ -37,18 +37,18 @@
         </div>
     </nav>
 </header>
-<div class="center">
-    <img src="../img/icon/logo.jpg" alt="logo SISTEC" class="img-fluid profile-img" height="400px">
-</div>
-
 <div class="container my-4">
-        <p>SISTEC est une société de service en informatique qui existe depuis pres de 30 ans, avec 25 ans d'experiance au près de ces diverses entités (Communes, Communautés de Commune, Agglomérations, Métropoles…),<br>
+    <div class="center fade-in">
+        <img src="../img/icon/logo.jpg" alt="logo SISTEC" class="img-fluid profile-img" height="400px">
+    </div>
+        <p class="fade-in">
+            SISTEC est une société de service en informatique qui existe depuis pres de 30 ans, avec 25 ans d'experiance au près de ces diverses entités (Communes, Communautés de Commune, Agglomérations, Métropoles…),<br>
             elle travaille avec 750 collectivités qui lui font confiance.<br>
             L'entreprise compte 11 collaborateurs. Depuis 2016, SISTEC a développé 7 solutions locales que je vais vous presentez ci-dessous :
         </p>
     <section>
-        <h2 class="h4 mb-4">SISTEC c'est 7 solutions</h2>
-        <div class="solution">
+        <h2 class="h4 mb-4 fade-in">SISTEC c'est 7 solutions</h2>
+        <div class="solution fade-in">
             <div class="card col-12 col-md-5 mt-4">
                 <div class="card-body">
                     <h5 class="card-title">AMETISTE - Cimetière</h5>
@@ -93,17 +93,16 @@
             </div>
         </div>
     </section>
-    <p class="mt-4">
+    <p class="mt-4 fade-in">
         en 2019, Sistec est desormais une filiale de JVS-Mairistem – Groupe JVS,
         et depuis 2019, Sistec a lancé le développement de sa nouvelle gamme de logiciels en technologie "full web" notament avec Enfance 360. <br>
         nouvelle gamme, donc de nouvelle technologie font surface, avant c'etait avec xojo et access, et maintenant nous avons du php avec le framework laravel, pour la création d'une api, eloquent pour des requetes plus simple et plus rapide, react pour le front-end.<br>
         un stockage objet avec amazon s3 pour le stockage des fichiers, et une base de donnée postgresql pour la gestion des données, docker pour un environnement de developpement plus simple et plus rapide au niveau de la mise en place de l'application.<br>
         et pour finir la création d'un etat d'edition pour la generation des pdf avec le logiciel webdev de pcsoft, ce sur quoi mon stage va etre basé :).
         je vais me laisser le droit d'ajouter la partie de l'integration dans la page articles vous pouvez ainsi voir la consulter ICI
-
     </p>
 
-    <div class="container my-4 flex-grow-1">
+    <div class="container my-4 flex-grow-1 fade-in">
         <h2 class="text-center my-4">ou contacter <strong>SISTEC </strong>?</h2>
         <div class="row">
             <div class="col-md-4">
@@ -136,6 +135,7 @@
 <footer class="bg-light text-center py-3">
     &copy; 2024 - réalisé par Fauré Léo
 </footer>
+<script src="../animation.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></body>
