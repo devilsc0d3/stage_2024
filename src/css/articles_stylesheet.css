@@ -1,5 +1,6 @@
 body {
     background-color: #f8f9fa;
+    font-family: Bahnschrift, serif;
 }
 
 footer {
@@ -17,6 +18,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 .overlay {
     position: absolute;
     top: 0;
