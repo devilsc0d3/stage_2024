@@ -89,3 +89,13 @@ img {
 strong {
     color: #ffa33d;
 }
+
+h1 {
+    font-family: "Bauhaus 93", serif;
+}
+
+@media (max-width: 500px) {
+    .profile-img {
+        width: 80%;
+    }
+}

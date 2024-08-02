@@ -69,3 +69,7 @@ a:hover {
 .center {
     margin: 50px auto;
 }
+
+h1 {
+    font-family: "Bauhaus 93", serif;
+}

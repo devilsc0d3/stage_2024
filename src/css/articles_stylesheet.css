@@ -61,3 +61,7 @@ footer {
 .card {
     border-radius: 4px 4px 40px 4px;
 }
+
+h1 {
+    font-family: "Bauhaus 93", serif;
+}
