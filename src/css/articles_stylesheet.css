@@ -32,14 +32,17 @@ footer {
     color: white;
     text-align: center;
 }
+
 .header-title {
     font-size: 2rem;
 }
+
 @media (min-width: 768px) {
     .header-title {
         font-size: 3rem;
     }
 }
+
 @media (min-width: 992px) {
     .header-title {
         font-size: 4rem;
