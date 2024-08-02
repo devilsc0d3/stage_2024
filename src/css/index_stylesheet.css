@@ -1,6 +1,6 @@
 .header {
     height: 100vh;
-    background: url('../img/background/background6.jpg') no-repeat center center/cover;
+    background: url('../img/background/background6.webp') no-repeat center center/cover;
     position: relative;
 }
 .overlay {
@@ -80,7 +80,7 @@ h1 {
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .fade-in.appear {
