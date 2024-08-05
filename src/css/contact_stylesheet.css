@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Georama:ital,wght@0,100..900;1,100..900&family=M+PLUS+Rounded+1c&display=swap');
+
+body {
+    font-family: "Georama", sans-serif;
+    font-weight: 400;
+}
+
 .header {
     height: 100vh;
     background: url('../img/background/contact.jpg') no-repeat center center/cover;
@@ -78,10 +86,9 @@ a:hover {
 }
 
 h1 {
-    font-family: "Bauhaus 93", serif;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }
 
-/* CSS for animations */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
