@@ -80,3 +80,11 @@ h1 {
     opacity: 1;
     transform: translateY(0);
 }
+
+.wd-100 {
+    width: 100%;
+}
+
+.wd-30 {
+    width: 30%;
+}
