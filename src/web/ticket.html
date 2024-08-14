@@ -158,8 +158,32 @@
                 le port 80. Pour résoudre ce problème, j'ai déplacé l'API Laravel sur le port 85.</p>
             <p>Voici Cyberduck qui est connecté au stockage objet S3 :</p>
             <img src="../img/documents/cyberduck.png" class="docu w-100" alt="cyberduck" loading="lazy">
+            <br>
+            <br>
+            <p>et voici donc la réponse JSON de webdev, afin de se retrouver dans le stockage objet :</p>
+            <img src="../img/documents/response-webdev.png" class="docu w-100" alt="reponse webdev" loading="lazy">
         </div>
     </div>
+
+    <div class="card mb-4 fade-in">
+        <div class="card-header">
+            Mise en Place de l'API pour Gérer les Files d'Attente des Requêtes - 15/08/2024
+        </div>
+        <div class="card-body">
+            <p>Dans le cadre de l'amélioration de notre infrastructure, j'ai implémenté une API existante pour gérer les files d'attente des requêtes.
+                Cette API est cruciale pour garantir que les demandes sont traitées de manière ordonnée et efficace, même sous forte charge.
+                L'utilisation d'une file d'attente permet de s'assurer que chaque requête est gérée sans surcharger le système, améliorant ainsi la performance globale.</p>
+            <p>L'API traite chaque requête en la plaçant dans une file d'attente, puis en la traitant séquentiellement, ce qui évite les conflits et les temps d'attente excessifs.</p>
+            <p>Ce système garantit une meilleure répartition des ressources et une gestion optimisée des requêtes, notamment dans des environnements où la charge de travail peut varier considérablement.</p>
+            <p>Voici un extrait de reponse JSON de l'API job :</p>
+            <img src="../img/documents/job.png" class="docu w-100" alt="gestion des files d'attente" loading="lazy">
+            <br>
+            <br>
+            <p>Architecture de l'API pour la gestion des files d'attente :</p>
+            <img src="../img/documents/architecture.png" class="docu w-100" alt="gestion des files d'attente" loading="lazy">
+        </div>
+    </div>
+
 
     <div class="card mb-4 fade-in">
         <div class="card-header">
