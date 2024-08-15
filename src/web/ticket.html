@@ -197,7 +197,14 @@
                 revanche, j'ai bien aimé utiliser Laravel et les instances S3 pour le stockage objet, car cela pourra me
                 servir à l'avenir. J'avais également quelques facilités du côté de Laravel et de Docker, car j'avais
                 déjà réalisé un projet de cours où j'ai utilisé Laravel avec Eloquent, l'ORM de Laravel, et Docker dans un
-                autre projet.</p>
+                autre projet.<br>
+                En complément de ces expériences, j'ai mis en place un flux de traitement automatisé via une API de facturation.
+                Cette dernière envoie les requêtes à une API-job, qui gère une liste d'attente et appelle une autre route pour générer un JSON exploitable par WebDev,
+                stocké dans un espace de stockage objet. J'ai développé un projet API REST sous WebDev qui, lorsqu'il est sollicité,
+                récupère les données depuis ce stockage, les enregistre localement, et les traite en générant des états de facture conformes.
+                Ces états sont ensuite enregistrés localement et stockés de nouveau dans un stockage objet.
+                Enfin, l'API WebDev retourne pour chaque PDF généré (identifié par un UUID) un identifiant unique pour faciliter le repérage.
+            </p>
             <p><strong>Axes d'amélioration :</strong></p>
             <ul>
                 <li>Approfondir mes compétences en WLanguage pour être plus à l'aise avec WebDev.</li>
@@ -206,9 +213,6 @@
                 </li>
                 <li>Continuer à me former sur les technologies de stockage objet comme AWS S3 pour optimiser leur
                     utilisation dans les projets futurs.
-                </li>
-                <li>Revoir les bonnes pratiques de gestion des ports et des configurations serveur pour éviter les
-                    conflits.
                 </li>
             </ul>
         </div>
