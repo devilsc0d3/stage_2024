@@ -1,0 +1,55 @@
+stages:
+  - deploy
+
+.deploy_template:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    # Exporte les variables dans des noms courts pour éviter les problèmes d'interpolation SSH
+    - export IMAGE="${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}"
+    - export REGISTRY="${CI_REGISTRY}"
+    - export REG_USER="${CI_REGISTRY_USER}"
+    - export REG_PASS="${CI_REGISTRY_PASSWORD}"
+
+  script:
+    - |
+      ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_IP \
+        IMAGE="$IMAGE" \
+        REGISTRY="$REGISTRY" \
+        REG_USER="$REG_USER" \
+        REG_PASS="$REG_PASS" \
+        CONTAINER_NAME="$CONTAINER_NAME" \
+        PORT="80" \
+        bash << 'REMOTE'
+          set -e
+
+          echo ">>> Login registry..."
+          docker login -u "$REG_USER" -p "$REG_PASS" "$REGISTRY"
+
+          echo ">>> Pull image: $IMAGE"
+          docker pull "$IMAGE"
+
+          echo ">>> Stop & remove old container..."
+          docker stop "$CONTAINER_NAME" || true
+          docker rm   "$CONTAINER_NAME" || true
+
+          echo ">>> Start new container..."
+          docker run -d \
+            --name "$CONTAINER_NAME" \
+            --restart unless-stopped \
+            --network app-network \
+            -p "80:80" \
+            "$IMAGE"
+
+          echo ">>> Deploy OK: $CONTAINER_NAME"
+      REMOTE
+
+deploy_prod:
+  extends: .deploy_template
+  rules:
+    - if: $TARGET_ENV == "prod"

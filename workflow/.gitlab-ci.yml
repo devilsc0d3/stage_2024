@@ -1,0 +1,25 @@
+stages:
+  - install
+  - lint
+  - test
+  - build
+  - deploy
+  - notify
+
+workflow:
+  rules:
+    # Push sur next => pipeline DEV, sans notification finale
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "next"'
+      variables:
+        TARGET_ENV: "prod"
+
+variables:
+  NODE_VERSION: "20"
+
+default:
+  image: node:20-alpine
+
+include:
+  - local: 'workflow/cd/build.yml'
+  - local: 'workflow/cd/deploy.yml'
+  - local: 'workflow/cd/health.yml'

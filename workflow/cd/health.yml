@@ -1,0 +1,24 @@
+healthcheck:
+  stage: deploy
+  image: curlimages/curl:latest
+  inherit:
+    default: false
+  needs:
+    - job: deploy_dev
+      optional: true
+    - job: deploy_prod
+      optional: true
+  script:
+    - |
+      for i in $(seq 1 10); do
+        if curl -s -f http://$VPS_IP:80; then
+          echo "Application en ligne !"
+          exit 0
+        fi
+        echo "Attente... ($i/10)"
+        sleep 5
+      done
+      echo "Timeout — application non disponible."
+      exit 1
+  rules:
+    - if: '$TARGET_ENV == "prod"'

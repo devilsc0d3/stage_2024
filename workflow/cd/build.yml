@@ -1,0 +1,24 @@
+build:docker:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+
+  script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+
+    # BUILD UNIQUE IMAGE
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG .
+
+    # TEST SUR LA MÊME IMAGE
+    - docker run --rm $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG nginx -t
+
+    # PUSH SEULEMENT SI OK
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+  rules:
+    - if: '$TARGET_ENV == "prod"'
